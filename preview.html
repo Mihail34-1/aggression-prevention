@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Без агресия в училище</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+/* ================= LIGHT LUXURY PALETTE ================= */
+
+:root{
+--bg:#f7f9fc;
+--surface:#ffffff;
+--surface2:#f1f5fb;
+--gold:#d4af37;
+--text:#1b1f2a;
+--muted:#5b6475;
+--line:rgba(0,0,0,0.08);
+}
+
+/* ================= BASE ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+/* ================= NAV ================= */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+
+.navbar{
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+.logo{
+color:var(--text);
+font-size:1.4rem;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+color:var(--muted);
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:var(--gold);
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:var(--text);
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),
+url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:25px;
+color:var(--text);
+}
+
+.hero-content p{
+font-size:1.2rem;
+margin-bottom:35px;
+color:var(--muted);
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 34px;
+background:var(--gold);
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(212,175,55,0.25);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+padding:110px 30px;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+.section-title{
+text-align:center;
+max-width:800px;
+margin:auto auto 60px;
+}
+
+.section-title h2{
+font-size:2.8rem;
+margin-bottom:20px;
+color:var(--text);
+}
+
+.section-title p{
+color:var(--muted);
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--surface);
+border-radius:25px;
+padding:40px 30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+border:1px solid var(--line);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= POSTER ================= */
+
+.poster-section{
+background:linear-gradient(135deg,#ffffff,#f3f6fb);
+}
+
+.poster-box{
+background:white;
+max-width:700px;
+margin:auto;
+border-radius:30px;
+padding:60px 40px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.poster-box h3{
+font-size:2.5rem;
+color:var(--text);
+}
+
+.poster-divider{
+width:120px;
+height:5px;
+background:var(--gold);
+margin:25px auto;
+}
+
+.poster-icons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:30px;
+font-size:2.5rem;
+}
+
+/* ================= SURVEY ================= */
+
+.survey-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.survey-card{
+background:var(--surface);
+border-radius:25px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+border:1px solid var(--line);
+}
+
+/* ================= MODEL ================= */
+
+.model-section{
+background:#f3f6fb;
+}
+
+.model-card{
+max-width:1000px;
+margin:auto;
+background:white;
+border-radius:30px;
+padding:50px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= CONTACTS ================= */
+
+.contacts-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.contact-box{
+background:white;
+border-radius:25px;
+padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+border:1px solid var(--line);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#ffffff;
+color:var(--muted);
+text-align:center;
+padding:30px;
+border-top:1px solid var(--line);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">Без агресия</div>
+
+<ul class="nav-links">
+<li><a href="#home">Начало</a></li>
+<li><a href="#poster">Плакат</a></li>
+<li><a href="#survey">Анкета</a></li>
+<li><a href="#model">Макет</a></li>
+<li><a href="#contacts">Контакти</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Заедно срещу агресията</h1>
+<p>Създаваме светла, спокойна и уважителна училищна среда</p>
+<a href="#poster" class="hero-btn">Разгледай проекта</a>
+</div>
+</section>
+
+<!-- INFO -->
+<section>
+<div class="section-title">
+<h2>Какво е агресия?</h2>
+<p>Физическа, вербална и онлайн форма на насилие</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Физическа</h3>
+<p>Блъскане и насилие</p>
+</div>
+
+<div class="card">
+<h3>Вербална</h3>
+<p>Обиди и подигравки</p>
+</div>
+
+<div class="card">
+<h3>Онлайн</h3>
+<p>Кибертормоз</p>
+</div>
+
+</div>
+</section>
+
+<!-- POSTER -->
+<section class="poster-section" id="poster">
+
+<div class="section-title">
+<h2>Плакат</h2>
+</div>
+
+<div class="poster-box">
+
+<h3>КАЖИ НЕ НА АГРЕСИЯТА</h3>
+
+<div class="poster-divider"></div>
+
+<p>Избирай добротата всеки ден</p>
+
+<div class="poster-icons">🤝 💛 🏫</div>
+
+</div>
+
+</section>
+
+<!-- SURVEY -->
+<section id="survey">
+
+<div class="section-title">
+<h2>Анкета</h2>
+</div>
+
+<div class="survey-grid">
+
+<div class="survey-card">
+<h3>Жертва на агресия?</h3>
+<canvas id="c1"></canvas>
+</div>
+
+<div class="survey-card">
+<h3>Бихте ли помогнали?</h3>
+<canvas id="c2"></canvas>
+</div>
+
+</div>
+
+</section>
+
+<!-- MODEL -->
+<section class="model-section" id="model">
+
+<div class="section-title">
+<h2>Макет</h2>
+</div>
+
+<div class="model-card">
+
+<div>
+<h3>Училище без страх</h3>
+<p>Светла и спокойна среда</p>
+</div>
+
+<div>
+<ul>
+<li>✔ Уважение</li>
+<li>✔ Подкрепа</li>
+<li>✔ Сигурност</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+
+<div class="section-title">
+<h2>Контакти</h2>
+</div>
+
+<div class="contacts-container">
+
+<div class="contact-box">
+<h3>Екип</h3>
+<p>Име: ___</p>
+<p>Клас: ___</p>
+</div>
+
+<div class="contact-box">
+<h3>Послание</h3>
+<p>Уважението е основа на обществото</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Без агресия в училище
+</footer>
+
+<script>
+
+/* scroll reveal */
+const sections=document.querySelectorAll("section");
+
+const obs=new IntersectionObserver(e=>{
+e.forEach(x=>{
+if(x.isIntersecting){
+x.target.classList.add("visible");
+}
+});
+},{threshold:0.2});
+
+sections.forEach(s=>obs.observe(s));
+
+/* charts */
+new Chart(document.getElementById("c1"),{
+type:"pie",
+data:{labels:["Да","Не"],datasets:[{data:[62,38]}]}
+});
+
+new Chart(document.getElementById("c2"),{
+type:"doughnut",
+data:{labels:["Да","Не"],datasets:[{data:[89,11]}]}
+});
+
+</script>
+
+</body>
+</html>
