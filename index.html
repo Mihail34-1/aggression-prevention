@@ -23,7 +23,20 @@
 --muted:#5b6475;
 --line:rgba(0,0,0,0.08);
 }
+ /* =============Photos ==================== */
+  .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
 
+.image-box img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
 /* ================= BASE ================= */
 
 *{
@@ -370,7 +383,6 @@ border-top:1px solid var(--line);
 <h2>Плакат</h2>
 </div>
 
-<!-- 👉 ДОБАВЕНА СНИМКА -->
 <div class="image-box">
   <img src="plakat.jpg" alt="Плакат против агресия">
 </div>
@@ -382,8 +394,6 @@ border-top:1px solid var(--line);
 <div class="poster-divider"></div>
 
 <p>Избирай добротата всеки ден</p>
-
-<div class="poster-icons">🤝 💛 🏫</div>
 
 </div>
 
@@ -419,7 +429,6 @@ border-top:1px solid var(--line);
 <h2>Макет</h2>
 </div>
 
-<!-- 👉 ДОБАВЕНА СНИМКА -->
 <div class="image-box">
   <img src="maket.jpg" alt="Макет на проект">
 </div>
@@ -445,18 +454,6 @@ border-top:1px solid var(--line);
 
 <!-- CONTACTS -->
 <section id="contacts">
-
-<div class="section-title">
-<h2>Контакти</h2>
-</div>
-
-<div class="contacts-container">
-
-<div class="contact-box">
-<h3>Екип</h3>
-<p>Име: ___</p>
-<p>Клас: ___</p>
-</div>
 
 <div class="contact-box">
 <h3>Послание</h3>
