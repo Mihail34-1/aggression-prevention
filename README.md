@@ -1,26 +1,38 @@
 # aggression-prevention
-Project Title: Awareness & Prevention of School Aggression
-Project Overview
-This initiative was developed by a team of four students from Bulgaria to shed light on the complex nature of aggression within the school environment. Our mission is to provide an accessible digital resource that helps identify, understand, and mitigate aggressive behavior among peers.
+Ето една още по-разгърната и подробна версия, която е подходяща за официална документация, "Readme" файл или специална страница „За проекта“. Тя добавя контекст за методиката, значението на проблема и по-детайлно описание на финализирането на проекта.
 
-Key Objectives
-Education: Defining the different forms of aggression (verbal, physical, and cyber).
+Official Project Documentation: Addressing and Mitigating School Aggression
+1. Executive Summary & Introduction
+This comprehensive digital initiative was conceptualized, designed, and executed by a dedicated team of four students from Bulgaria. The project serves as a specialized educational platform built to investigate the multifaceted nature of aggression within modern educational institutions.
 
-Support: Providing guidance for students, educators, and parents.
+In an era where social dynamics are becoming increasingly complex, our mission is to provide a structured, research-oriented overview of why aggression occurs and how it manifests. By exploring the psychological, environmental, and social drivers of such behavior, we aim to contribute to the global effort of fostering empathy and safety in the classroom.
 
-Awareness: Highlighting the long-term impact of bullying on mental health.
+2. Comprehensive Scope and Strategic Objectives
+The project is meticulously organized into several core pillars, each addressing a critical aspect of school-related conflict:
 
-Project Status & Maintenance
-Current Version: v1.0.0 (Final Release)
+In-depth Analysis of Aggressive Behavior: We delve into the root causes and triggers of peer-to-peer conflict, distinguishing between proactive and reactive aggression to help users identify early warning signs.
 
-Update Policy: Please be informed that this is a completed educational project. Following the v1.0.0 release, there are no further updates or technical support planned. The site is provided "as is" for public use.
+Theoretical Prevention Strategies: The platform offers a curated selection of insights and methodologies aimed at creating a safer, more inclusive, and supportive school environment for students of all backgrounds.
 
-Language & Accessibility
-Language: The primary content of this project is written in Bulgarian.
+Community Engagement & Awareness: By highlighting the long-term psychological impact of bullying and verbal abuse, the project encourages students, parents, and educators to take a proactive stance against hostility.
 
-Translation: To ensure accessibility for international visitors, we recommend using the Google Translate browser extension or any integrated machine translation tool.
+Conflict Resolution Frameworks: We provide theoretical guidance on how to de-escalate tense situations and promote healthy communication between all parties involved.
 
-Credits
-Developed with dedication by a team of four Bulgarian students. We hope this project serves as a valuable tool for your community.
+3. Technical Lifecycle, Maintenance & Versioning
+We would like to formally announce that with the successful deployment of Version 1.0.0, the project has officially reached its final development milestone.
 
-Thank you for your interest and for supporting school safety!
+Development Status: Completed.
+
+Support Policy: As this is an academic endeavor created for educational purposes, please be advised that no further updates, security patches, or feature enhancements are scheduled for the future.
+
+Finality of Content: The current version (v1.0.0) represents the absolute and final scope of our research and technical implementation. We believe the platform stands as a complete resource in its current state.
+
+4. Language, Accessibility & International Navigation
+To maintain the authenticity of our research and cater to our local community, the entirety of the project’s content is curated in Bulgarian.
+
+For International Visitors: We recognize the global importance of this topic. For non-native speakers, we highly recommend utilizing integrated browser translation tools (such as Google Translate or DeepL). These tools are highly effective at rendering our content accessible, ensuring that our findings can be understood by a worldwide audience.
+
+5. Closing Statement & Acknowledgments
+We would like to extend our gratitude to everyone who explores this site. We hope that the data and insights presented here serve as a catalyst for positive change and contribute meaningfully to the ongoing conversation regarding school safety and student well-being.
+
+Thank you for your interest in our work and for supporting a future without school aggression.
