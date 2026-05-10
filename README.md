@@ -1,6 +1,4 @@
 # aggression-prevention
-Ето една още по-разгърната и подробна версия, която е подходяща за официална документация, "Readme" файл или специална страница „За проекта“. Тя добавя контекст за методиката, значението на проблема и по-детайлно описание на финализирането на проекта.
-
 Official Project Documentation: Addressing and Mitigating School Aggression
 1. Executive Summary & Introduction
 This comprehensive digital initiative was conceptualized, designed, and executed by a dedicated team of four students from Bulgaria. The project serves as a specialized educational platform built to investigate the multifaceted nature of aggression within modern educational institutions.
