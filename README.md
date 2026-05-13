@@ -1,4 +1,4 @@
-# aggression-prevention
+# Аggression-prevention
 Official Project Documentation: Addressing and Mitigating School Aggression
 1. Executive Summary & Introduction
 This comprehensive digital initiative was conceptualized, designed, and executed by a dedicated team of four students from Bulgaria. The project serves as a specialized educational platform built to investigate the multifaceted nature of aggression within modern educational institutions.
