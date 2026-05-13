@@ -257,6 +257,72 @@ section{
   padding:35px;
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
   border:1px solid var(--line);
+
+  /* FIX: prevent text overflow issues */
+  word-break:break-word;
+}
+
+/* ================= ADD: QUESTION TITLE ================= */
+
+.survey-card h3{
+  font-size:1.2rem;
+  margin-bottom:20px;
+  color:var(--text);
+  text-align:center;
+}
+
+/* ================= ADD: RESULT SPHERES ================= */
+
+.result-sphere{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ffffff,#f3f6fb);
+  border:2px solid rgba(0,0,0,0.06);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  margin:15px auto;
+  padding:10px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  transition:0.3s ease;
+}
+
+.result-sphere:hover{
+  transform:translateY(-5px) scale(1.03);
+}
+
+.result-sphere span{
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--gold);
+}
+
+.result-sphere p{
+  font-size:0.8rem;
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.2;
+}
+
+/* ================= MOBILE FIX (ADD ONLY) ================= */
+
+@media (max-width:768px){
+
+  .result-sphere{
+    width:120px;
+    height:120px;
+  }
+
+  .survey-card h3{
+    font-size:1rem;
+  }
+}
 }
 
 /* ================= MODEL ================= */
@@ -429,19 +495,248 @@ footer{
 <div class="survey-grid">
 
 <div class="survey-card">
-<h3>Жертва на агресия?</h3>
-<canvas id="c1"></canvas>
+<h3>1. Според теб агресията колко сериозен проблем е?</h3>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Много сериозен</p>
+</div>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Доста сериозен</p>
+</div>
+
+<div class="result-sphere">
+<span>7,1%</span>
+<p>Не е сериозен проблем</p>
+</div>
+
+<div class="result-sphere">
+<span>7,1%</span>
+<p>Изобщо не е проблем</p>
+</div>
+
 </div>
 
 <div class="survey-card">
-<h3>Бихте ли помогнали?</h3>
-<canvas id="c2"></canvas>
+<h3>2. Виждаш ли агресия в ежедневието си?</h3>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Рядко</p>
+</div>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Да, понякога</p>
+</div>
+
+<div class="result-sphere">
+<span>14,3%</span>
+<p>Почти всеки ден</p>
+</div>
+
+<div class="result-sphere">
+<span>0%</span>
+<p>Никога</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>3. Какъв тип агресия се случва най-често?</h3>
+
+<div class="result-sphere">
+<span>100%</span>
+<p>Обиди и подигравки</p>
+</div>
+
+<div class="result-sphere">
+<span>28,6%</span>
+<p>Физическа</p>
+</div>
+
+<div class="result-sphere">
+<span>14,3%</span>
+<p>Онлайн тормоз</p>
+</div>
+
+<div class="result-sphere">
+<span>14,3%</span>
+<p>Социална изолация</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>4. Как реагират хората около теб?</h3>
+
+<div class="result-sphere">
+<span>35,7%</span>
+<p>Наблюдават</p>
+</div>
+
+<div class="result-sphere">
+<span>28,6%</span>
+<p>Опитват се да помогнат</p>
+</div>
+
+<div class="result-sphere">
+<span>28,6%</span>
+<p>Игнорират</p>
+</div>
+
+<div class="result-sphere">
+<span>7,1%</span>
+<p>Включват се</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>5. Ти как би реагирал/а?</h3>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Зависи от ситуацията</p>
+</div>
+
+<div class="result-sphere">
+<span>35,7%</span>
+<p>Търся помощ</p>
+</div>
+
+<div class="result-sphere">
+<span>14,3%</span>
+<p>Игнорирам</p>
+</div>
+
+<div class="result-sphere">
+<span>7,1%</span>
+<p>Намесвам се</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>6. Къде най-често забелязваш агресия?</h3>
+
+<div class="result-sphere">
+<span>100%</span>
+<p>Училище</p>
+</div>
+
+<div class="result-sphere">
+<span>50%</span>
+<p>Приятелски среди</p>
+</div>
+
+<div class="result-sphere">
+<span>21,4%</span>
+<p>Онлайн</p>
+</div>
+
+<div class="result-sphere">
+<span>21,4%</span>
+<p>На улицата</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>7. Какво най-много помага?</h3>
+
+<div class="result-sphere">
+<span>71,4%</span>
+<p>Емоционална интелигентност</p>
+</div>
+
+<div class="result-sphere">
+<span>64,3%</span>
+<p>Повече разговори</p>
+</div>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Подкрепа от приятели</p>
+</div>
+
+<div class="result-sphere">
+<span>28,6%</span>
+<p>Контрол и правила</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>8. Чувстваш ли се безопасно?</h3>
+
+<div class="result-sphere">
+<span>57,1%</span>
+<p>Да</p>
+</div>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Горе-долу да</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>9. Кой има най-голяма роля?</h3>
+
+<div class="result-sphere">
+<span>50%</span>
+<p>Всеки от нас</p>
+</div>
+
+<div class="result-sphere">
+<span>28,6%</span>
+<p>Родители</p>
+</div>
+
+<div class="result-sphere">
+<span>14,3%</span>
+<p>Учители</p>
+</div>
+
+<div class="result-sphere">
+<span>7,1%</span>
+<p>Приятели</p>
+</div>
+
+</div>
+
+<div class="survey-card">
+<h3>10. Какво би направило средата по-спокойна?</h3>
+
+<div class="result-sphere">
+<span>64,3%</span>
+<p>Повече уважение</p>
+</div>
+
+<div class="result-sphere">
+<span>50%</span>
+<p>По-строги правила</p>
+</div>
+
+<div class="result-sphere">
+<span>42,9%</span>
+<p>Повече подкрепа</p>
+</div>
+
+<div class="result-sphere">
+<span>21,4%</span>
+<p>Образование по темата</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
-
 <!-- MODEL -->
 <section class="model-section" id="model">
 
