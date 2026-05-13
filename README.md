@@ -52,7 +52,17 @@ We recognize that the challenge of school aggression knows no borders. For non-n
 
 ---
 
-### 7. Closing Statement & Acknowledgments
+### 7. Intellectual Property & Usage Policy
+All research findings, digital assets, and structural designs contained within this project are the intellectual property of the founding team.
+
+Notice on Material Usage: The redistribution, reproduction, or commercial use of any materials from this platform is strictly prohibited without the express written consent of the authors. If you wish to utilize our content for educational, research, or public awareness purposes, you must obtain formal authorization.
+
+For inquiries regarding permissions and licensing, please contact our lead representative at:
+Email: mihail.a.minchev2030@pmg3-varna.org
+
+---
+
+### 8. Closing Statement & Acknowledgments
 
 We would like to extend our deepest gratitude to our mentors and the educational community who supported this research. It is our sincere hope that the data, insights, and frameworks presented here serve as a catalyst for positive change. We believe that through education and awareness, we can move closer to a future where every student feels seen, heard, and safe.
 
